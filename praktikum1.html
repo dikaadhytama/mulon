@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Canvas HTML : My First canvas</title>
+</head>
+<style style="text/css"> 
+   canvas {
+        background-color: #B0E0E6;
+		border: solid 1px;
+   }
+</style>
+<body>
+    <canvas width="800" height="450" id="canvas"></canvas>
+
+    <script type="text/javascript">
+        var c=document.getElementById('canvas');
+        var ctx=c.getContext('2d');
+        
+         //lingkaran
+         ctx.beginPath();
+         ctx.arc(400, 225, 150, 0, 2 * Math.PI);
+        ctx.fillStyle = "#8B0000";
+        ctx.strokeStyle = "white";
+        ctx.fill();
+        ctx.stroke();
+
+         //lingkaran2
+         ctx.beginPath();
+         ctx.arc(400, 225, 100, 0, 2 * Math.PI);
+        ctx.fillStyle = "#FFA500";
+        ctx.strokeStyle = "white";
+        ctx.fill();
+    
+        //segi empat
+        ctx.beginPath();
+        ctx.rect(350, 180, 100, 100);
+        ctx.fillStyle = "#768FFC";
+        ctx.fill();
+        ctx.stroke();   
+
+        //segitiga
+		ctx.beginPath();
+		ctx.moveTo(50,225);
+		ctx.lineTo(150,120);
+		ctx.lineTo(150,330);
+		ctx.fillStyle = "#228B22";
+		ctx.fill();
+
+		//segitiga
+		ctx.beginPath();
+		ctx.moveTo(750,225);
+		ctx.lineTo(650,120);
+		ctx.lineTo(650,330);
+		ctx.fillStyle = "#228B22";
+		ctx.fill();
+        
+        
+    </script>
+    
+</body>
+</html>
