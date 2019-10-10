@@ -37,7 +37,13 @@
             ctx.fill();
             }
             else {
-            alert("Tekan Enter di Keyboard untuk mewarnai!");
+            ctx.beginPath();
+                    var x = e.offsetX;
+                    var y = e.offsetY;
+                    ctx.lineTo(x,y);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = 'black';
+                    ctx.stroke();
         }
     }
 
